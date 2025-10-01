@@ -26,4 +26,5 @@ const generateRound = () => {
   return [progression.join(" "), String(correctAnswer)];
 };
 
-export default () => runGame(generateRound);
+const gameDescription = "What number is missing in the progression?";
+export default () => runGame(gameDescription, generateRound);

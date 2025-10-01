@@ -1,11 +1,11 @@
-import runGame from '../index.js';
+import runGame from "../index.js";
 
 const randomNum = () => Math.floor(Math.random() * 100);
 const operations = {
-	'+': (a, b) => a + b,
-	'-': (a, b) => a - b,
-	'*': (a, b) => a * b,
-  };
+  "+": (a, b) => a + b,
+  "-": (a, b) => a - b,
+  "*": (a, b) => a * b,
+};
 
 const generateRound = () => {
   const number1 = randomNum();
@@ -15,7 +15,7 @@ const generateRound = () => {
   const correctAnswer = operations[randomSymbol](number1, number2);
 
   return [`${number1} ${randomSymbol} ${number2}`, String(correctAnswer)];
-  };
+};
 
-export default () => runGame(generateRound);
-
+const gameDescription = "What is the result of the expression?";
+export default () => runGame(gameDescription, generateRound);

@@ -1,4 +1,4 @@
-import runGame from '../index.js';
+import runGame from "../index.js";
 
 const randomNum = () => Math.floor(Math.random() * 100);
 
@@ -6,9 +6,9 @@ const findGCD = (a, b) => {
   if (b === 0) {
     return Math.abs(a);
   }
-return findGCD(b, a % b);
-}
-  
+  return findGCD(b, a % b);
+};
+
 const generateRound = () => {
   const num1 = randomNum();
   const num2 = randomNum();
@@ -16,5 +16,5 @@ const generateRound = () => {
   const answer = findGCD(num1, num2).toString();
   return [question, answer];
 };
-
-export default () => runGame(generateRound)
+const gameDescription = "Find the greatest common divisor of given numbers.";
+export default () => runGame(gameDescription, generateRound);
