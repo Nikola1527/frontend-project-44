@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const isEven = (num) => num % 2 === 0;
 
 const runEvenGames = () => {
-  console.log("Welcome to the Brain Games!");
-  const name = readlineSync.question("May I have your name? ");
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -16,7 +16,7 @@ const runEvenGames = () => {
     console.log(`Question: ${question}`);
     const answer = readlineSync.question("Your answer: ");
 
-    const correctAnswer = isEven(question) ? "yes" : "no";
+    const correctAnswer = isEven(question) ? 'yes' : 'no';
 
     if (answer !== correctAnswer) {
       console.log(
@@ -26,7 +26,7 @@ const runEvenGames = () => {
       return;
     }
 
-    console.log("Correct!");
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };
